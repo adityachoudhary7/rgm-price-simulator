@@ -6,7 +6,13 @@ st.set_page_config(page_title="RGM Scenario Simulator", layout="wide")
 
 st.title("Price Elasticity & Profit Optimization Dashboard")
 st.markdown("Simulate pricing strategies using the log-log econometric elasticity model.")
-
+st.markdown("""
+### 💡 How to use this tool:
+1. **Simulate Scenarios:** Use the Strategy Levers on the left to adjust the Proposed Price and COGS.
+2. **Watch the Volume Trap:** Notice how dropping the price might increase top-line Revenue, but frequently destroys bottom-line Gross Profit. 
+3. **The Engine:** Volume changes are dynamically predicted using an own-price elasticity coefficient of **-1.87**. This parameter was extracted from historical retail POS data using a Log-Log OLS econometric regression model.
+---
+""")
 # 2. Sidebar for User Inputs
 st.sidebar.header("Strategy Levers")
 new_price = st.sidebar.slider(
@@ -43,3 +49,12 @@ st.metric(label="New Gross Margin %", value=result["Gross Margin %"])
 
 st.markdown("---")
 st.markdown("*Note: Baseline Price is ₹100.00. Elasticity coefficient (Own-Price): -1.87*")
+
+
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; color: grey; font-size: 14px;'>"
+    "Engineered by <b>Aditya Choudhary</b> | Revenue Growth Management Portfolio"
+    "</div>", 
+    unsafe_allow_html=True
+)
