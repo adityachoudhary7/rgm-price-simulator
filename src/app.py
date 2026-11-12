@@ -23,6 +23,8 @@ new_price = st.sidebar.slider(
     step=1.0
 )
 cogs = st.sidebar.number_input("Cost of Goods Sold (COGS) (₹)", value=58.0)
+st.sidebar.markdown("---")
+st.sidebar.markdown("Engineered by **Aditya Choudhary**")
 
 # 3. Connect to the Mathematical Engine
 # We initialize the simulator with the updated COGS, then run the scenario
@@ -51,10 +53,10 @@ st.markdown("---")
 st.markdown("*Note: Baseline Price is ₹100.00. Elasticity coefficient (Own-Price): -1.87*")
 
 
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: grey; font-size: 14px;'>"
-    "Engineered by <b>Aditya Choudhary</b> | Revenue Growth Management Portfolio"
-    "</div>", 
-    unsafe_allow_html=True
-)
+# st.markdown("---")
+# st.markdown(
+#     "<div style='text-align: center; color: grey; font-size: 14px;'>"
+#     "Engineered by <b>Aditya Choudhary</b> | Revenue Growth Management Portfolio"
+#     "</div>", 
+#     unsafe_allow_html=True
+# )
